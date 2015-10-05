@@ -1,4 +1,4 @@
-package main
+package gotsx
 
 const (
 	XA_EXPLICIT = 0
