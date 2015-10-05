@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 const (
 	XA_EXPLICIT = 0
 	XA_RETRY    = 1
@@ -20,8 +16,15 @@ const (
 )
 
 func XBegin(status int) (result int)
+func XEnd()
+func XTest() (result int)
 
-func main() {
-	result := XBegin(XBEGIN_STARTED)
-	fmt.Println(result)
-}
+// Need to work out how to pass an arbitrary imm8 to an assembly function.
+// func XAbort(status uint8) (result int)
+
+// For now, I've just implemented an xabort with 2 as the immediate.
+func XAbort2() (result int)
+
+
+
+
